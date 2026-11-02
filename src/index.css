@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Custom background grid & radial mesh */
+.bg-radial-mesh {
+  background: 
+    radial-gradient(circle at 50% 0%, rgba(19, 181, 206, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 100% 50%, rgba(11, 42, 74, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(19, 181, 206, 0.08) 0%, transparent 60%);
+}
+
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(11, 42, 74, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(19, 181, 206, 0.18);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(11, 42, 74, 0.55);
+  border-color: rgba(19, 181, 206, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(19, 181, 206, 0.25);
+  transform: translateY(-3px);
+}
+
+/* Glowing text gradients */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #FFFFFF 20%, #13B5CE 70%, #38d8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFFFFF 40%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
